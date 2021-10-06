@@ -80,7 +80,7 @@ async def upload(client,message):
 				e = res['msg']
 				await message.reply_text(f"Error: ```{e}```",reply_to_message_id = message.message_id)
 		else:
-			pdisk_url(api_key,link,title)
+			res = pdisk_url(api_key,link,title)
 			try:
 				id = res['data']['item_id']
 				await message.reply_text(f'Title : {title}\nURL:```https://cofilink.com/share-video?videoid={id}```\n This File Will Be Uploading in  10 - 15 Minutes ',reply_to_message_id = message.message_id)
